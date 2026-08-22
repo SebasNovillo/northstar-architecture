@@ -1,3 +1,10 @@
+import { Header } from "@/components/layout/Header";
+
 export default function Home() {
-  return <main>Northstar Architecture</main>;
+  return (
+    <>
+      <Header />
+      <main>Northstar Architecture</main>
+    </>
+  );
 }
