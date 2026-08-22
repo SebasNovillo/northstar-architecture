@@ -8,20 +8,25 @@ const navigation = [
 ] as const;
 
 const linkStyles =
-  "text-[#d8d5cf] transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current";
+  "text-[#eee9df] [text-shadow:0_1px_10px_rgba(0,0,0,0.45)] transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current";
 
 export function Header() {
   return (
-    <header className="bg-[#0a0a09] px-6 py-7 text-white md:px-16 md:py-9">
-      <div className="mx-auto flex max-w-[1600px] flex-col gap-8 md:flex-row md:items-center md:justify-between md:gap-12">
-        <Link
-          href="/"
-          className={`${linkStyles} w-fit font-serif text-[15px] font-medium tracking-[-0.01em]`}
-        >
-          Northstar Architecture
-        </Link>
+    <header className="absolute inset-x-0 top-0 z-20 text-white">
+      <div className="mx-auto flex max-w-[1800px] flex-col gap-8 px-6 py-7 md:px-10 lg:grid lg:grid-cols-[42%_58%] lg:gap-0 lg:p-0">
+        <div className="lg:px-12 lg:py-9 xl:px-16">
+          <Link
+            href="/"
+            className={`${linkStyles} w-fit font-serif text-[15px] font-medium tracking-[-0.01em]`}
+          >
+            Northstar Architecture
+          </Link>
+        </div>
 
-        <nav aria-label="Primary navigation">
+        <nav
+          aria-label="Primary navigation"
+          className="lg:flex lg:items-start lg:justify-end lg:px-12 lg:py-9 xl:px-16"
+        >
           <ul className="grid grid-cols-2 gap-x-10 gap-y-4 md:flex md:items-center md:gap-10 lg:gap-12">
             {navigation.map((item) => (
               <li key={item.href}>
