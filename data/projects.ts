@@ -1,0 +1,66 @@
+import type { Project } from "@/types/project";
+
+export const projects: Project[] = [
+  {
+    slug: "lakeview-residence",
+    title: "Lakeview Residence",
+    location: "Chicago, Illinois",
+    category: "Residential",
+    year: 2026,
+    image: "/images/projects/lakeview-residence.jpg",
+    imageAlt:
+      "Modern living space with expansive windows overlooking the city",
+    featured: true,
+  },
+  {
+    slug: "fulton-workspace",
+    title: "Fulton Workspace",
+    location: "Chicago, Illinois",
+    category: "Commercial",
+    year: 2025,
+    image: "/images/projects/fulton-workspace.jpg",
+    imageAlt: "Contemporary brick building with reflective windows",
+    featured: true,
+  },
+  {
+    slug: "north-shore-retreat",
+    title: "North Shore Retreat",
+    location: "Highland Park, Illinois",
+    category: "Residential",
+    year: 2025,
+    image: "/images/projects/north-shore-retreat.jpg",
+    imageAlt:
+      "Contemporary residential architecture with layered balconies",
+    featured: true,
+  },
+  {
+    slug: "civic-arts-pavilion",
+    title: "Civic Arts Pavilion",
+    location: "Evanston, Illinois",
+    category: "Public",
+    year: 2024,
+    image: "/images/projects/civic-arts-pavilion.jpg",
+    imageAlt: "Contemporary pavilion with green stone walls",
+    featured: true,
+  },
+  {
+    slug: "river-north-loft",
+    title: "River North Loft",
+    location: "Chicago, Illinois",
+    category: "Residential",
+    year: 2024,
+    image: "/images/projects/river-north-loft.jpg",
+    imageAlt: "Open-plan loft with a contemporary kitchen and living area",
+    featured: false,
+  },
+  {
+    slug: "west-loop-studio",
+    title: "West Loop Studio",
+    location: "Chicago, Illinois",
+    category: "Commercial",
+    year: 2023,
+    image: "/images/projects/west-loop-studio.jpg",
+    imageAlt: "Open commercial studio with a sculptural spiral staircase",
+    featured: false,
+  },
+];
