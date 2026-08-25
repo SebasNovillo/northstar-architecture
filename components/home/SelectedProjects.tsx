@@ -12,9 +12,9 @@ export function SelectedProjects() {
       className="bg-[#f2eee8] text-[#1a1917]"
     >
       <div className="mx-auto max-w-[1440px] px-8 py-20 md:px-12 md:py-28 lg:px-16">
-        <div className="mb-10 flex items-end justify-between gap-8 pb-6 md:mb-14">
+        <div className="mb-10 flex items-end justify-between gap-8 border-b border-[#e4ddd4] pb-6 md:mb-14">
           <div>
-            <p className="mb-2 text-[11px] tracking-[0.2em] text-[#8a8278] uppercase">
+            <p className="mb-2 text-[11px] tracking-[0.2em] text-[#6b6660] uppercase">
               Work
             </p>
             <h2
@@ -42,7 +42,7 @@ export function SelectedProjects() {
                 key={project.slug}
                 project={project}
                 aspectRatio="4 / 5"
-                sizes="(max-width: 767px) calc(100vw - 4rem), 40vw"
+                sizes="(max-width: 767px) calc(100vw - 4rem), (min-width: 1440px) 528px, 40vw"
               />
             ))}
           </div>
@@ -53,7 +53,7 @@ export function SelectedProjects() {
                 key={project.slug}
                 project={project}
                 aspectRatio="8 / 5"
-                sizes="(max-width: 767px) calc(100vw - 4rem), 58vw"
+                sizes="(max-width: 767px) calc(100vw - 4rem), (min-width: 1440px) 752px, 58vw"
               />
             ))}
 
@@ -63,7 +63,7 @@ export function SelectedProjects() {
                   key={project.slug}
                   project={project}
                   aspectRatio="4 / 3"
-                  sizes="(max-width: 767px) calc(100vw - 4rem), 45vw"
+                  sizes="(max-width: 767px) calc(100vw - 4rem), (min-width: 1440px) 590px, 45vw"
                 />
               ))}
             </div>
@@ -75,7 +75,7 @@ export function SelectedProjects() {
                 key={project.slug}
                 project={project}
                 aspectRatio="21 / 8"
-                sizes="(max-width: 767px) calc(100vw - 4rem), 100vw"
+                sizes="(max-width: 767px) calc(100vw - 4rem), (min-width: 1440px) 1312px, calc(100vw - 8rem)"
               />
             ))}
           </div>

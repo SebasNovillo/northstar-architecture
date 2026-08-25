@@ -11,11 +11,12 @@ export function Introduction() {
               id="introduction-heading"
               className="font-serif text-3xl leading-[1.1] font-normal md:text-4xl lg:text-5xl"
             >
-              Architecture shaped by context, material and human experience.
+              Architecture shaped by context, material, and human experience.
             </h2>
           </div>
 
           <div className="flex flex-col justify-end md:col-span-4 lg:col-span-4 lg:col-start-9">
+            <div aria-hidden="true" className="mb-8 h-px w-8 bg-[#c8bfb5]" />
             <p className="text-[15px] leading-[1.625] text-[#6b6660]">
               Northstar is a contemporary Chicago architecture studio. We
               create thoughtful spaces that respond to their environment and

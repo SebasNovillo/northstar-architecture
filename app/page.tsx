@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="relative bg-[#171716]">
       <Header />
-      <main>
+      <main id="main-content">
         <Hero />
         <Introduction />
         <SelectedProjects />

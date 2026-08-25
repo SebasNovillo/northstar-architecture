@@ -2,14 +2,14 @@ import Link from "next/link";
 
 const navigationLinks = [
   { href: "/projects", label: "Projects" },
-  { href: "/services", label: "Services" },
-  { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
+  { href: "/#services", label: "Services" },
+  { href: "/#about", label: "About" },
+  { href: "/#contact", label: "Contact" },
 ] as const;
 
 const connectionLinks = [
-  { href: "#", label: "Instagram" },
-  { href: "#", label: "LinkedIn" },
+  { label: "Instagram" },
+  { label: "LinkedIn" },
   { href: "mailto:studio@northstararchitecture.com", label: "Email" },
 ] as const;
 
@@ -46,6 +46,7 @@ export function Footer() {
                 <Link
                   key={link.href}
                   href={link.href}
+                  prefetch={link.href === "/projects" ? false : undefined}
                   className={footerLinkClassName}
                 >
                   {link.label}
@@ -61,20 +62,29 @@ export function Footer() {
             >
               Connect
             </p>
-            <nav
+            <div
               aria-labelledby="footer-connect-heading"
               className="flex flex-col gap-3"
             >
-              {connectionLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  className={footerLinkClassName}
-                >
-                  {link.label}
-                </a>
-              ))}
-            </nav>
+              {connectionLinks.map((link) =>
+                "href" in link ? (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    className={footerLinkClassName}
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <span
+                    key={link.label}
+                    className="py-1 text-sm leading-[1.5] tracking-wide text-[#9a928a]"
+                  >
+                    {link.label}
+                  </span>
+                ),
+              )}
+            </div>
           </div>
         </div>
 

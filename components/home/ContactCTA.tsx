@@ -1,6 +1,7 @@
 export function ContactCTA() {
   return (
     <section
+      id="contact"
       aria-labelledby="contact-cta-heading"
       className="border-b border-[#e4ddd4] bg-[#f2eee8] text-[#1a1917]"
     >
@@ -8,15 +9,15 @@ export function ContactCTA() {
         <div className="grid md:grid-cols-12">
           <div className="md:col-span-10 lg:col-span-8">
             <div className="mb-10 flex flex-wrap items-center gap-3 text-[11px] tracking-[0.2em] uppercase md:mb-12">
-              <p className="text-[#8a8278]">Get in Touch</p>
+              <p className="text-[#6b6660]">Get in Touch</p>
               <span aria-hidden="true" className="text-[#d0c8be]">
                 —
               </span>
-              <p className="text-[#8a8278]">Chicago, Illinois</p>
+              <p className="text-[#6b6660]">Chicago, Illinois</p>
               <span aria-hidden="true" className="text-[#d0c8be]">
                 —
               </span>
-              <p className="text-[#8a8278]">
+              <p className="text-[#6b6660]">
                 New projects &amp; collaborations
               </p>
             </div>
@@ -41,7 +42,7 @@ export function ContactCTA() {
 
               <a
                 href="mailto:studio@northstararchitecture.com"
-                className="text-sm leading-[1.5] tracking-wide text-[#8a8278] transition-colors duration-200 hover:text-[#1a1917] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current"
+                className="text-sm leading-[1.5] tracking-wide text-[#6b6660] transition-colors duration-200 hover:text-[#1a1917] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current"
               >
                 studio@northstararchitecture.com
               </a>

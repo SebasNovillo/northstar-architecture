@@ -34,13 +34,14 @@ const services: readonly Service[] = [
 export function Services() {
   return (
     <section
+      id="services"
       aria-labelledby="services-heading"
       className="border-y border-[#e4ddd4] bg-[#f2eee8] text-[#1a1917]"
     >
       <div className="mx-auto max-w-[1440px] px-8 py-20 md:px-12 md:py-28 lg:px-16">
         <div className="grid gap-y-12 md:grid-cols-12 md:gap-x-8">
           <div className="md:col-span-4">
-            <p className="mb-4 text-[11px] tracking-[0.2em] text-[#8a8278] uppercase">
+            <p className="mb-4 text-[11px] tracking-[0.2em] text-[#6b6660] uppercase">
               Capabilities
             </p>
             <h2
@@ -59,7 +60,7 @@ export function Services() {
               >
                 <div className="flex items-start justify-between gap-6 py-6 md:py-7">
                   <div className="flex min-w-0 flex-1 items-start gap-6 md:gap-10">
-                    <span className="min-w-5 shrink-0 pt-[3px] text-[11px] tracking-[0.1em] text-[#c8bfb5]">
+                    <span className="min-w-5 shrink-0 pt-[3px] text-[11px] tracking-[0.1em] text-[#6b6660]">
                       {service.id}
                     </span>
 
@@ -67,7 +68,7 @@ export function Services() {
                       <h3 className="font-serif text-[1.2rem] leading-snug font-normal transition-opacity duration-200">
                         {service.title}
                       </h3>
-                      <p className="mt-2 max-h-24 overflow-hidden text-sm leading-relaxed text-[#8a8278] opacity-100 transition-all duration-300 md:max-h-0 md:opacity-0 md:group-hover/service:max-h-16 md:group-hover/service:opacity-100">
+                      <p className="mt-2 max-h-24 overflow-hidden text-sm leading-relaxed text-[#6b6660] opacity-100 transition-all duration-300 md:max-h-0 md:opacity-0 md:group-hover/service:max-h-16 md:group-hover/service:opacity-100">
                         {service.description}
                       </p>
                     </div>

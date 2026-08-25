@@ -19,7 +19,8 @@ export const projects: Project[] = [
     category: "Commercial",
     year: 2025,
     image: "/images/projects/fulton-workspace.jpg",
-    imageAlt: "Contemporary brick building with reflective windows",
+    imageAlt:
+      "Contemporary brick commercial building with reflective windows",
     featured: true,
   },
   {
@@ -30,7 +31,7 @@ export const projects: Project[] = [
     year: 2025,
     image: "/images/projects/north-shore-retreat.jpg",
     imageAlt:
-      "Contemporary residential architecture with layered balconies",
+      "Contemporary residential architecture with layered balconies and windows",
     featured: true,
   },
   {
@@ -40,7 +41,8 @@ export const projects: Project[] = [
     category: "Public",
     year: 2024,
     image: "/images/projects/civic-arts-pavilion.jpg",
-    imageAlt: "Contemporary pavilion with green stone walls",
+    imageAlt:
+      "Sleek contemporary pavilion with distinctive green marble walls and flat roof",
     featured: true,
   },
   {
