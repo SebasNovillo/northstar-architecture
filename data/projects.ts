@@ -52,7 +52,8 @@ export const projects: Project[] = [
     category: "Residential",
     year: 2024,
     image: "/images/projects/river-north-loft.jpg",
-    imageAlt: "Open-plan loft with a contemporary kitchen and living area",
+    imageAlt:
+      "Spacious open-plan loft with contemporary kitchen and living areas",
     featured: false,
   },
   {
@@ -62,7 +63,8 @@ export const projects: Project[] = [
     category: "Commercial",
     year: 2023,
     image: "/images/projects/west-loop-studio.jpg",
-    imageAlt: "Open commercial studio with a sculptural spiral staircase",
+    imageAlt:
+      "Open plan commercial studio with dramatic spiral staircase and natural light",
     featured: false,
   },
 ];

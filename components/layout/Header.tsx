@@ -13,7 +13,15 @@ const navigation = [
 const focusStyles =
   "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current";
 
-export function Header() {
+type HeaderProps = {
+  activeItem?: "projects";
+  variant?: "home" | "solid";
+};
+
+export function Header({
+  activeItem,
+  variant = "home",
+}: HeaderProps = {}) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -26,7 +34,8 @@ export function Header() {
     return () => window.removeEventListener("scroll", updateHeader);
   }, []);
 
-  const solidHeader = scrolled || menuOpen;
+  const isHome = variant === "home";
+  const solidHeader = !isHome || scrolled || menuOpen;
 
   return (
     <>
@@ -48,7 +57,9 @@ export function Header() {
           <Link
             href="/"
             onClick={() => setMenuOpen(false)}
-            className={`${focusStyles} font-serif text-[15px] tracking-[-0.01em] ${
+            className={`${focusStyles} font-serif tracking-[-0.01em] ${
+              isHome ? "text-[15px]" : "text-base md:text-[17px]"
+            } ${
               solidHeader
                 ? "text-[#1a1917]"
                 : "text-[#f2eee8] [text-shadow:0_1px_10px_rgba(0,0,0,0.5)]"
@@ -59,21 +70,33 @@ export function Header() {
 
           <nav aria-label="Primary navigation" className="hidden md:block">
             <ul className="flex items-center gap-8 lg:gap-10">
-              {navigation.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    prefetch={item.href === "/projects" ? false : undefined}
-                    className={`${focusStyles} text-sm transition-opacity hover:opacity-55 ${
-                      solidHeader
-                        ? "text-[#1a1917]"
-                        : "text-[#f2eee8] [text-shadow:0_1px_10px_rgba(0,0,0,0.55)]"
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
+              {navigation.map((item) => {
+                const isActive =
+                  activeItem === "projects" && item.href === "/projects";
+
+                return (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      prefetch={item.href === "/projects" ? false : undefined}
+                      aria-current={isActive ? "page" : undefined}
+                      className={`${focusStyles} relative text-sm transition-opacity hover:opacity-55 ${
+                        solidHeader
+                          ? "text-[#1a1917]"
+                          : "text-[#f2eee8] [text-shadow:0_1px_10px_rgba(0,0,0,0.55)]"
+                      }`}
+                    >
+                      {item.label}
+                      {isActive ? (
+                        <span
+                          aria-hidden="true"
+                          className="absolute inset-x-0 -bottom-1 h-px bg-current"
+                        />
+                      ) : null}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </nav>
 
@@ -98,18 +121,28 @@ export function Header() {
             className="border-t border-[#e4ddd4] bg-[rgba(242,238,232,0.97)] px-8 pb-5 text-[#1a1917] backdrop-blur-[14px] md:hidden"
           >
             <ul>
-              {navigation.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    prefetch={item.href === "/projects" ? false : undefined}
-                    onClick={() => setMenuOpen(false)}
-                    className={`${focusStyles} block border-b border-[#e4ddd4] py-4 text-[15px] last:border-b-0`}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
+              {navigation.map((item) => {
+                const isActive =
+                  activeItem === "projects" && item.href === "/projects";
+
+                return (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      prefetch={item.href === "/projects" ? false : undefined}
+                      onClick={() => setMenuOpen(false)}
+                      aria-current={isActive ? "page" : undefined}
+                      className={`${focusStyles} block border-b border-[#e4ddd4] py-4 text-[15px] last:border-b-0 ${
+                        isActive
+                          ? "font-medium underline underline-offset-4"
+                          : ""
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </nav>
         ) : null}

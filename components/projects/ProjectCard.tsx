@@ -7,12 +7,14 @@ type ProjectCardProps = {
   project: Project;
   aspectRatio: string;
   sizes: string;
+  eager?: boolean;
 };
 
 export function ProjectCard({
   project,
   aspectRatio,
   sizes,
+  eager = false,
 }: ProjectCardProps) {
   return (
     <Link
@@ -30,6 +32,7 @@ export function ProjectCard({
           alt={project.imageAlt}
           fill
           sizes={sizes}
+          loading={eager ? "eager" : "lazy"}
           className="object-cover transition-transform duration-700 group-hover:scale-[1.04] motion-reduce:transition-none"
         />
         <div
