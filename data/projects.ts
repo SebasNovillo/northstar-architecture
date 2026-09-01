@@ -1,4 +1,31 @@
-import type { Project } from "@/types/project";
+import type { Project, ProjectImage } from "@/types/project";
+
+const projectImages = {
+  lakeviewResidence: {
+    src: "/images/projects/lakeview-residence.jpg",
+    alt: "Modern living space with expansive windows overlooking the city",
+  },
+  fultonWorkspace: {
+    src: "/images/projects/fulton-workspace.jpg",
+    alt: "Contemporary brick commercial building with reflective windows",
+  },
+  northShoreRetreat: {
+    src: "/images/projects/north-shore-retreat.jpg",
+    alt: "Contemporary residential architecture with layered balconies and windows",
+  },
+  civicArtsPavilion: {
+    src: "/images/projects/civic-arts-pavilion.jpg",
+    alt: "Sleek contemporary pavilion with distinctive green marble walls and flat roof",
+  },
+  riverNorthLoft: {
+    src: "/images/projects/river-north-loft.jpg",
+    alt: "Spacious open-plan loft with contemporary kitchen and living areas",
+  },
+  westLoopStudio: {
+    src: "/images/projects/west-loop-studio.jpg",
+    alt: "Open plan commercial studio with dramatic spiral staircase and natural light",
+  },
+} satisfies Record<string, ProjectImage>;
 
 export const projects: Project[] = [
   {
@@ -7,10 +34,31 @@ export const projects: Project[] = [
     location: "Chicago, Illinois",
     category: "Residential",
     year: 2026,
-    image: "/images/projects/lakeview-residence.jpg",
-    imageAlt:
-      "Modern living space with expansive windows overlooking the city",
+    image: projectImages.lakeviewResidence.src,
+    imageAlt: projectImages.lakeviewResidence.alt,
     featured: true,
+    statement: "A lakeside home that opens entirely to the water.",
+    description: [
+      "Sited on a narrow lot steps from Lake Michigan, the Lakeview Residence is organized around a single continuous datum — a horizontal concrete band that anchors the structure to the land while the glazed volumes above it float toward the water. The program unfolds across three levels, each oriented to capture a distinct quality of lakeside light.",
+      "Interior materials — white oak, honed limestone, and blackened steel — were chosen for their quiet resonance with the landscape. The kitchen and living spaces share an unobstructed east-facing plane of glass that transforms throughout the day, the lake shifting from silver at dawn to deep blue at dusk.",
+    ],
+    area: "4,200 sq ft",
+    scope: "New Construction",
+    status: "Completed",
+    imageStory: [
+      projectImages.northShoreRetreat,
+      projectImages.riverNorthLoft,
+      projectImages.civicArtsPavilion,
+      projectImages.westLoopStudio,
+    ],
+    designApproach: {
+      statement: "Light, water, and the horizon as primary materials.",
+      paragraphs: [
+        "The design began with the view — not as a singular framed moment, but as a continuous condition that shifts with season and time of day. Every room is positioned to engage Lake Michigan at a different angle, allowing the presence of water to be felt throughout the home.",
+        "The structure was kept visually slender so glass could dominate. Solid walls are held to the perimeter, while an open spatial sequence allows daylight and long views to move through a quiet central core of stone and timber.",
+      ],
+    },
+    featureImage: projectImages.riverNorthLoft,
   },
   {
     slug: "fulton-workspace",
@@ -18,10 +66,31 @@ export const projects: Project[] = [
     location: "Chicago, Illinois",
     category: "Commercial",
     year: 2025,
-    image: "/images/projects/fulton-workspace.jpg",
-    imageAlt:
-      "Contemporary brick commercial building with reflective windows",
+    image: projectImages.fultonWorkspace.src,
+    imageAlt: projectImages.fultonWorkspace.alt,
     featured: true,
+    statement: "A workspace that honors the industrial history of its block.",
+    description: [
+      "The Fulton Workspace occupies a former cold storage building at the edge of the West Loop's transition zone — a district still negotiating between its meatpacking past and its emergence as a creative hub. Rather than erasing the building's texture, the renovation works with the existing masonry, exposing brick and timber frame where the structure is most expressive.",
+      "The new insertions — a glazed stair, a series of operable skylights, and collaborative zones at each floor — are deliberate counterpoints to the found fabric. Steel and glass read as additions rather than replacements, allowing the original building to remain the primary voice.",
+    ],
+    area: "12,800 sq ft",
+    scope: "Adaptive Reuse & Interior Fit-Out",
+    status: "Completed",
+    imageStory: [
+      projectImages.westLoopStudio,
+      projectImages.civicArtsPavilion,
+      projectImages.riverNorthLoft,
+      projectImages.northShoreRetreat,
+    ],
+    designApproach: {
+      statement: "New work made legible against the old.",
+      paragraphs: [
+        "The existing brick shell and timber frame were treated as found infrastructure rather than a backdrop. New circulation and shared spaces are inserted with restraint, preserving the irregularities that reveal the building's industrial life.",
+        "Steel, glass, and pale oak form a lighter material register within the heavier masonry envelope. Their precise junctions make each intervention readable while allowing daylight and activity to connect the workplace across floors.",
+      ],
+    },
+    featureImage: projectImages.westLoopStudio,
   },
   {
     slug: "north-shore-retreat",
@@ -29,10 +98,31 @@ export const projects: Project[] = [
     location: "Highland Park, Illinois",
     category: "Residential",
     year: 2025,
-    image: "/images/projects/north-shore-retreat.jpg",
-    imageAlt:
-      "Contemporary residential architecture with layered balconies and windows",
+    image: projectImages.northShoreRetreat.src,
+    imageAlt: projectImages.northShoreRetreat.alt,
     featured: true,
+    statement: "A retreat defined by sequence, threshold, and quietude.",
+    description: [
+      "Set back from a ravine edge in Highland Park, the North Shore Retreat is a house organized around the experience of arrival. A compressed entry sequence — low ceilings, narrow corridors, limited views — gives way to a dramatic release as the main living space opens onto a cantilevered deck above the tree canopy.",
+      "The house reads from the street as a series of horizontal bands: board-formed concrete at the base, zinc cladding at the upper volumes, and the transparent datum of the living level in between. Materials were selected to weather naturally, allowing the house to become quieter and more grounded with age.",
+    ],
+    area: "3,600 sq ft",
+    scope: "New Construction",
+    status: "Completed",
+    imageStory: [
+      projectImages.lakeviewResidence,
+      projectImages.riverNorthLoft,
+      projectImages.civicArtsPavilion,
+      projectImages.westLoopStudio,
+    ],
+    designApproach: {
+      statement: "Compression and release shape the experience of retreat.",
+      paragraphs: [
+        "The house is organized as a gradual passage from the protected street edge toward the openness of the ravine. Lower ceilings and measured openings make the arrival deliberately quiet before the main rooms expand into the tree canopy.",
+        "Structure, storage, and services are concentrated along the solid western edge. This clears the opposite side for continuous glazing, framing changing foliage while maintaining privacy and a strong sense of shelter.",
+      ],
+    },
+    featureImage: projectImages.lakeviewResidence,
   },
   {
     slug: "civic-arts-pavilion",
@@ -40,10 +130,31 @@ export const projects: Project[] = [
     location: "Evanston, Illinois",
     category: "Public",
     year: 2024,
-    image: "/images/projects/civic-arts-pavilion.jpg",
-    imageAlt:
-      "Sleek contemporary pavilion with distinctive green marble walls and flat roof",
+    image: projectImages.civicArtsPavilion.src,
+    imageAlt: projectImages.civicArtsPavilion.alt,
     featured: true,
+    statement: "A civic gathering space rooted in material permanence.",
+    description: [
+      "The Civic Arts Pavilion was commissioned by the City of Evanston as a year-round venue for public programming, outdoor performances, and community gathering. Its form is disciplined: a rectangular plan beneath a broad flat roof, the perimeter defined by alternating panels of verde marble and clear glass.",
+      "The roof overhang is sized to provide shade in summer and shelter in rain, extending the usable season of the outdoor plaza. Inside, a flexible gallery and reception space can be configured for exhibitions, lectures, or informal use — a civic room that belongs equally to its neighbours and its visitors.",
+    ],
+    area: "8,400 sq ft",
+    scope: "New Construction — Civic Commission",
+    status: "Completed",
+    imageStory: [
+      projectImages.fultonWorkspace,
+      projectImages.westLoopStudio,
+      projectImages.northShoreRetreat,
+      projectImages.lakeviewResidence,
+    ],
+    designApproach: {
+      statement: "Civic openness held within a permanent frame.",
+      paragraphs: [
+        "The pavilion is conceived as a single generous roof beneath which public life can take different forms. Its clear structural rhythm supports exhibitions, performances, and informal gatherings without prescribing how the room must be occupied.",
+        "Stone gives the building weight and civic presence, while transparent corners keep it connected to the plaza. Deep overhangs temper sun and rain, extending the threshold between interior programming and the surrounding public landscape.",
+      ],
+    },
+    featureImage: projectImages.northShoreRetreat,
   },
   {
     slug: "river-north-loft",
@@ -51,10 +162,31 @@ export const projects: Project[] = [
     location: "Chicago, Illinois",
     category: "Residential",
     year: 2024,
-    image: "/images/projects/river-north-loft.jpg",
-    imageAlt:
-      "Spacious open-plan loft with contemporary kitchen and living areas",
+    image: projectImages.riverNorthLoft.src,
+    imageAlt: projectImages.riverNorthLoft.alt,
     featured: false,
+    statement: "A loft that breathes life into a former warehouse floor.",
+    description: [
+      "The River North Loft occupies a single floor of a 1920s industrial building two blocks from the Chicago River. The existing structure — heavy timber, cast iron columns, and original maple floors — set the tone for an interior that layers new elements sparingly against the weight of the found space.",
+      "The intervention is concentrated in a single built element: a continuous millwork volume that runs the length of the east wall, containing kitchen, storage, and study without interrupting the flow of the open plan. Everything else is furniture, light, and the patience to leave the existing fabric alone.",
+    ],
+    area: "2,800 sq ft",
+    scope: "Interior Architecture & Adaptive Reuse",
+    status: "Completed",
+    imageStory: [
+      projectImages.lakeviewResidence,
+      projectImages.northShoreRetreat,
+      projectImages.westLoopStudio,
+      projectImages.fultonWorkspace,
+    ],
+    designApproach: {
+      statement: "One inhabited element defines an otherwise open field.",
+      paragraphs: [
+        "Rather than subdividing the warehouse floor, the design gathers kitchen, storage, study, and utilities into one continuous millwork volume. This leaves the original timber structure and generous perimeter windows uninterrupted.",
+        "New materials are deliberately quiet beside the existing maple floors, iron columns, and brick walls. Light moves across old and new surfaces without hierarchy, allowing the loft's history to remain present in everyday use.",
+      ],
+    },
+    featureImage: projectImages.lakeviewResidence,
   },
   {
     slug: "west-loop-studio",
@@ -62,9 +194,30 @@ export const projects: Project[] = [
     location: "Chicago, Illinois",
     category: "Commercial",
     year: 2023,
-    image: "/images/projects/west-loop-studio.jpg",
-    imageAlt:
-      "Open plan commercial studio with dramatic spiral staircase and natural light",
+    image: projectImages.westLoopStudio.src,
+    imageAlt: projectImages.westLoopStudio.alt,
     featured: false,
+    statement: "A creative studio organized around vertical connection.",
+    description: [
+      "The West Loop Studio consolidates a creative agency across two previously disconnected floors of a mixed-use building. The central move was to cut a new opening between levels and insert a custom steel staircase — transforming two separate offices into a single vertically integrated studio with a clear sense of address.",
+      "The staircase is the spatial event around which everything else is arranged. Open to both floors, it doubles as a casual meeting space, a display surface, and the primary source of visual connection between teams. Natural light enters from a new skylight directly above, drawing the eye upward through the building.",
+    ],
+    area: "5,600 sq ft",
+    scope: "Interior Architecture & Renovation",
+    status: "Completed",
+    imageStory: [
+      projectImages.fultonWorkspace,
+      projectImages.civicArtsPavilion,
+      projectImages.riverNorthLoft,
+      projectImages.northShoreRetreat,
+    ],
+    designApproach: {
+      statement: "Vertical connection becomes the studio's shared room.",
+      paragraphs: [
+        "The new stair is positioned as an occupied threshold rather than a circulation afterthought. Its broad landings support conversation, display, and informal work while maintaining clear sightlines between the two studio floors.",
+        "A skylight draws daylight through the opening and gives the interior a common orientation. Around this vertical center, quieter work zones remain flexible, defined by furniture and acoustic surfaces instead of permanent partitions.",
+      ],
+    },
+    featureImage: projectImages.fultonWorkspace,
   },
 ];

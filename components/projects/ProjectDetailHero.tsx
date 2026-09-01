@@ -14,9 +14,9 @@ export function ProjectDetailHero({ project }: ProjectDetailHeroProps) {
   return (
     <section
       aria-labelledby="project-title"
-      className="bg-[#f2eee8] pt-[120px] text-[#1a1917]"
+      className="bg-[#f2eee8] pt-[112px] text-[#1a1917] md:pt-[120px]"
     >
-      <div className="mx-auto max-w-[1440px] px-8 pt-10 md:px-12 md:pt-16 lg:px-16">
+      <div className="mx-auto max-w-[1440px] px-8 pt-8 md:px-12 md:pt-12 lg:px-16">
         <div className="mb-10 md:mb-14">
           <Link
             href="/projects"
@@ -27,7 +27,7 @@ export function ProjectDetailHero({ project }: ProjectDetailHeroProps) {
           </Link>
         </div>
 
-        <div className="mb-14 grid gap-y-6 border-b border-[#e4ddd4] pb-14 md:mb-20 md:grid-cols-12 md:gap-x-8 md:pb-20">
+        <div className="grid gap-y-8 border-b border-[#e4ddd4] pb-12 md:grid-cols-12 md:gap-x-8 md:pb-16">
           <div className="md:col-span-7 lg:col-span-6">
             <h1
               id="project-title"
@@ -37,21 +37,21 @@ export function ProjectDetailHero({ project }: ProjectDetailHeroProps) {
             </h1>
           </div>
 
-          <dl className="flex flex-col justify-end gap-3 md:col-span-4 md:col-start-9">
-            <div className="flex items-center justify-between gap-6">
-              <dt className="text-[11px] tracking-[0.12em] text-[#6b6660] uppercase">
+          <dl className="flex flex-col justify-end md:col-span-4 md:col-start-9">
+            <div className="flex items-center justify-between gap-6 py-3">
+              <dt className="text-[11px] tracking-[0.15em] text-[#6b6660] uppercase">
                 Location
               </dt>
               <dd className="text-right text-sm">{project.location}</dd>
             </div>
-            <div className="flex items-center justify-between gap-6 border-t border-[#e4ddd4] pt-3">
-              <dt className="text-[11px] tracking-[0.12em] text-[#6b6660] uppercase">
+            <div className="flex items-center justify-between gap-6 border-t border-[#e4ddd4] py-3">
+              <dt className="text-[11px] tracking-[0.15em] text-[#6b6660] uppercase">
                 Type
               </dt>
               <dd className="text-right text-sm">{project.category}</dd>
             </div>
-            <div className="flex items-center justify-between gap-6 border-t border-[#e4ddd4] pt-3">
-              <dt className="text-[11px] tracking-[0.12em] text-[#6b6660] uppercase">
+            <div className="flex items-center justify-between gap-6 border-t border-[#e4ddd4] py-3">
+              <dt className="text-[11px] tracking-[0.15em] text-[#6b6660] uppercase">
                 Year
               </dt>
               <dd className="text-right text-sm">{project.year}</dd>
@@ -60,7 +60,7 @@ export function ProjectDetailHero({ project }: ProjectDetailHeroProps) {
         </div>
 
         <div
-          className="relative overflow-hidden bg-[#d0c8be]"
+          className="relative mt-10 overflow-hidden bg-[#d0c8be] md:mt-14"
           style={{ aspectRatio: "16 / 9" }}
         >
           <Image
