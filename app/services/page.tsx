@@ -1,5 +1,6 @@
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { ServicesClosingCTA } from "@/components/services/ServicesClosingCTA";
 import { ServicesDetails } from "@/components/services/ServicesDetails";
 import { ServicesHero } from "@/components/services/ServicesHero";
 import { ServicesIndex } from "@/components/services/ServicesIndex";
@@ -17,6 +18,7 @@ export default function ServicesPage() {
         <ServicesIndex />
         <ServicesDetails />
         <ServicesProcess />
+        <ServicesClosingCTA />
       </main>
 
       <Footer />
