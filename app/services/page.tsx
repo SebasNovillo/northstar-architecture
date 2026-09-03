@@ -4,6 +4,7 @@ import { ServicesDetails } from "@/components/services/ServicesDetails";
 import { ServicesHero } from "@/components/services/ServicesHero";
 import { ServicesIndex } from "@/components/services/ServicesIndex";
 import { ServicesIntroduction } from "@/components/services/ServicesIntroduction";
+import { ServicesProcess } from "@/components/services/ServicesProcess";
 
 export default function ServicesPage() {
   return (
@@ -15,6 +16,7 @@ export default function ServicesPage() {
         <ServicesIntroduction />
         <ServicesIndex />
         <ServicesDetails />
+        <ServicesProcess />
       </main>
 
       <Footer />
