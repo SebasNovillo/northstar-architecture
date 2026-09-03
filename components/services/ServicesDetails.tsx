@@ -79,7 +79,7 @@ export function ServicesDetails() {
       <section
         id={residential.id}
         aria-labelledby={`${residential.id}-heading`}
-        className="border-t border-[#e4ddd4] bg-[#f2eee8] text-[#1a1917]"
+        className="scroll-mt-16 border-t border-[#e4ddd4] bg-[#f2eee8] text-[#1a1917] md:scroll-mt-[72px]"
       >
         <div className="mx-auto max-w-[1440px] px-8 py-20 md:px-12 md:py-28 lg:px-16">
           <div className="grid gap-y-10 md:grid-cols-12 md:gap-x-8">
@@ -108,7 +108,7 @@ export function ServicesDetails() {
       <section
         id={commercial.id}
         aria-labelledby={`${commercial.id}-heading`}
-        className="border-t border-[#e4ddd4] bg-[#f2eee8] text-[#1a1917]"
+        className="scroll-mt-16 border-t border-[#e4ddd4] bg-[#f2eee8] text-[#1a1917] md:scroll-mt-[72px]"
       >
         <div className="mx-auto max-w-[1440px] px-8 py-20 md:px-12 md:py-28 lg:px-16">
           <div className="mb-12 grid gap-y-4 border-b border-[#e4ddd4] pb-12 md:mb-16 md:grid-cols-12 md:gap-x-8 md:pb-16">
@@ -153,7 +153,7 @@ export function ServicesDetails() {
       <section
         id={interior.id}
         aria-labelledby={`${interior.id}-heading`}
-        className="bg-[#1a1917] text-[#f2eee8]"
+        className="scroll-mt-16 bg-[#1a1917] text-[#f2eee8] md:scroll-mt-[72px]"
       >
         <div className="mx-auto max-w-[1440px] px-8 py-20 md:px-12 md:py-28 lg:px-16">
           <div className="grid gap-y-10 md:grid-cols-12 md:gap-x-8">
@@ -185,7 +185,7 @@ export function ServicesDetails() {
       <section
         id={renovation.id}
         aria-labelledby={`${renovation.id}-heading`}
-        className="border-t border-[#e4ddd4] bg-[#f2eee8] text-[#1a1917]"
+        className="scroll-mt-16 border-t border-[#e4ddd4] bg-[#f2eee8] text-[#1a1917] md:scroll-mt-[72px]"
       >
         <div className="mx-auto max-w-[1440px] px-8 py-20 md:px-12 md:py-28 lg:px-16">
           <div className="mb-12 flex items-start gap-6 md:mb-16 md:gap-10">

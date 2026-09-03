@@ -1,13 +1,32 @@
+import Link from "next/link";
+
 type ServiceIndexItem = {
   id: `0${number}`;
+  target: string;
   title: string;
 };
 
 const services: readonly ServiceIndexItem[] = [
-  { id: "01", title: "Residential Architecture" },
-  { id: "02", title: "Commercial Architecture" },
-  { id: "03", title: "Interior Architecture" },
-  { id: "04", title: "Renovation & Adaptive Reuse" },
+  {
+    id: "01",
+    target: "residential-architecture",
+    title: "Residential Architecture",
+  },
+  {
+    id: "02",
+    target: "commercial-architecture",
+    title: "Commercial Architecture",
+  },
+  {
+    id: "03",
+    target: "interior-architecture",
+    title: "Interior Architecture",
+  },
+  {
+    id: "04",
+    target: "renovation-adaptive-reuse",
+    title: "Renovation & Adaptive Reuse",
+  },
 ];
 
 export function ServicesIndex() {
@@ -24,11 +43,13 @@ export function ServicesIndex() {
         <ol>
           {services.map((service) => (
             <li
-              key={service.id}
-              tabIndex={0}
-              className="group border-t border-[#e4ddd4] focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#1a1917]"
+              key={service.target}
+              className="border-t border-[#e4ddd4]"
             >
-              <div className="flex items-center justify-between gap-6 py-8 md:py-10">
+              <Link
+                href={`/services#${service.target}`}
+                className="group flex items-center justify-between gap-6 py-8 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#1a1917] md:py-10"
+              >
                 <span className="w-7 shrink-0 text-[11px] tracking-[0.12em] text-[#8a8278] transition-colors duration-300 group-hover:text-[#1a1917] group-focus-visible:text-[#1a1917] motion-reduce:transition-none">
                   {service.id}
                 </span>
@@ -43,7 +64,7 @@ export function ServicesIndex() {
                 >
                   →
                 </span>
-              </div>
+              </Link>
             </li>
           ))}
         </ol>
