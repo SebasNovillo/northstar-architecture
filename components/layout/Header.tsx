@@ -1,13 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const navigation = [
   { href: "/projects", label: "Projects" },
-  { href: "/#services", label: "Services" },
-  { href: "/#about", label: "About" },
-  { href: "/#contact", label: "Contact" },
+  { href: "/services", label: "Services" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
 ] as const;
 
 const focusStyles =
@@ -22,6 +23,7 @@ export function Header({
   activeItem,
   variant = "home",
 }: HeaderProps = {}) {
+  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -72,7 +74,9 @@ export function Header({
             <ul className="flex items-center gap-8 lg:gap-10">
               {navigation.map((item) => {
                 const isActive =
-                  activeItem === "projects" && item.href === "/projects";
+                  pathname === item.href ||
+                  pathname.startsWith(`${item.href}/`) ||
+                  (activeItem === "projects" && item.href === "/projects");
 
                 return (
                   <li key={item.href}>
@@ -123,7 +127,9 @@ export function Header({
             <ul>
               {navigation.map((item) => {
                 const isActive =
-                  activeItem === "projects" && item.href === "/projects";
+                  pathname === item.href ||
+                  pathname.startsWith(`${item.href}/`) ||
+                  (activeItem === "projects" && item.href === "/projects");
 
                 return (
                   <li key={item.href}>
