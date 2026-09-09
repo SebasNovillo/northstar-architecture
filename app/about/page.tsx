@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { AboutClosingCTA } from "@/components/about/AboutClosingCTA";
 import { AboutApproach } from "@/components/about/AboutApproach";
 import { AboutHero } from "@/components/about/AboutHero";
 import { LookingForward } from "@/components/about/LookingForward";
@@ -27,6 +28,7 @@ export default function AboutPage() {
         <Principles />
         <StudioFacts />
         <LookingForward />
+        <AboutClosingCTA />
       </main>
 
       <Footer />
