@@ -34,7 +34,7 @@ export function ProjectNextProject({
       >
         <div className="mx-auto max-w-[1440px] px-8 py-14 md:px-12 md:py-20 lg:px-16">
           <div className="mb-10 flex items-center justify-between md:mb-14">
-            <p className="text-[11px] tracking-[0.15em] text-[#8a8278] uppercase">
+            <p className="text-[11px] tracking-[0.15em] text-[#6b6660] uppercase">
               Next Project
             </p>
             <span
@@ -63,7 +63,7 @@ export function ProjectNextProject({
 
               <dl className="flex flex-col gap-3">
                 <div className="flex items-center justify-between gap-6 border-t border-[#e4ddd4] py-3">
-                  <dt className="text-[11px] tracking-[0.15em] text-[#8a8278] uppercase">
+                  <dt className="text-[11px] tracking-[0.15em] text-[#6b6660] uppercase">
                     Location
                   </dt>
                   <dd className="text-right text-sm text-[#1a1917]">
@@ -71,7 +71,7 @@ export function ProjectNextProject({
                   </dd>
                 </div>
                 <div className="flex items-center justify-between gap-6 border-t border-[#e4ddd4] py-3">
-                  <dt className="text-[11px] tracking-[0.15em] text-[#8a8278] uppercase">
+                  <dt className="text-[11px] tracking-[0.15em] text-[#6b6660] uppercase">
                     Type
                   </dt>
                   <dd className="text-right text-sm text-[#1a1917]">
@@ -79,7 +79,7 @@ export function ProjectNextProject({
                   </dd>
                 </div>
                 <div className="flex items-center justify-between gap-6 border-t border-[#e4ddd4] py-3">
-                  <dt className="text-[11px] tracking-[0.15em] text-[#8a8278] uppercase">
+                  <dt className="text-[11px] tracking-[0.15em] text-[#6b6660] uppercase">
                     Year
                   </dt>
                   <dd className="text-right text-sm text-[#1a1917]">
@@ -95,7 +95,7 @@ export function ProjectNextProject({
       <div className="mx-auto max-w-[1440px] border-t border-[#e4ddd4] px-8 pt-6 pb-14 md:px-12 md:pb-20 lg:px-16">
         <Link
           href="/projects"
-          className="inline-flex min-h-11 items-center gap-2.5 text-[13px] tracking-wide text-[#8a8278] transition-colors duration-200 hover:text-[#1a1917] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1a1917] motion-reduce:transition-none"
+          className="inline-flex min-h-11 items-center gap-2.5 text-[13px] tracking-wide text-[#6b6660] transition-colors duration-200 hover:text-[#1a1917] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1a1917] motion-reduce:transition-none"
         >
           <span aria-hidden="true" className="block h-px w-4 bg-current" />
           Back to All Projects

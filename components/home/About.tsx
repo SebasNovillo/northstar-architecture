@@ -69,7 +69,7 @@ export function About() {
             </p>
 
             <Link
-              href="/#about"
+              href="/about"
               className="group inline-flex items-center gap-3 text-sm tracking-wide transition-opacity duration-200 hover:opacity-50 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-current"
             >
               About the Studio

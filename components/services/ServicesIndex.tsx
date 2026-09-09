@@ -50,7 +50,7 @@ export function ServicesIndex() {
                 href={`/services#${service.target}`}
                 className="group flex items-center justify-between gap-6 py-8 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#1a1917] md:py-10"
               >
-                <span className="w-7 shrink-0 text-[11px] tracking-[0.12em] text-[#8a8278] transition-colors duration-300 group-hover:text-[#1a1917] group-focus-visible:text-[#1a1917] motion-reduce:transition-none">
+                <span className="w-7 shrink-0 text-[11px] tracking-[0.12em] text-[#6b6660] transition-colors duration-300 group-hover:text-[#1a1917] group-focus-visible:text-[#1a1917] motion-reduce:transition-none">
                   {service.id}
                 </span>
 
