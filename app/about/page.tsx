@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import { AboutApproach } from "@/components/about/AboutApproach";
 import { AboutHero } from "@/components/about/AboutHero";
+import { LookingForward } from "@/components/about/LookingForward";
 import { Principles } from "@/components/about/Principles";
 import { StudioFacts } from "@/components/about/StudioFacts";
 import { StudioStory } from "@/components/about/StudioStory";
@@ -25,6 +26,7 @@ export default function AboutPage() {
         <StudioStory />
         <Principles />
         <StudioFacts />
+        <LookingForward />
       </main>
 
       <Footer />
