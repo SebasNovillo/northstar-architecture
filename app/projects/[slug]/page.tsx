@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 
+import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { ProjectDetailHero } from "@/components/projects/ProjectDetailHero";
 import { ProjectDetailOverview } from "@/components/projects/ProjectDetailOverview";
@@ -41,6 +42,8 @@ export default async function ProjectDetailPage({
         <ProjectFeatureImage project={project} />
         <ProjectNextProject currentProject={project} projects={projects} />
       </main>
+
+      <Footer />
     </div>
   );
 }
