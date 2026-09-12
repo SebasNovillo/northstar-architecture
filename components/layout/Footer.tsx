@@ -2,9 +2,9 @@ import Link from "next/link";
 
 const navigationLinks = [
   { href: "/projects", label: "Projects" },
-  { href: "/#services", label: "Services" },
-  { href: "/#about", label: "About" },
-  { href: "/#contact", label: "Contact" },
+  { href: "/services", label: "Services" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
 ] as const;
 
 const connectionLinks = [
