@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { Footer } from "@/components/layout/Footer";
@@ -17,6 +18,22 @@ type ProjectDetailPageProps = {
 
 export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: ProjectDetailPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const project = projects.find((item) => item.slug === slug);
+
+  if (!project) {
+    notFound();
+  }
+
+  return {
+    title: `${project.title} | Northstar Architecture`,
+    description: `${project.title} is a ${project.category.toLowerCase()} architecture project by Northstar Architecture in ${project.location}, ${project.status.toLowerCase()} in ${project.year}. ${project.statement}`,
+  };
 }
 
 export default async function ProjectDetailPage({
