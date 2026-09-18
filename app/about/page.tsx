@@ -10,10 +10,33 @@ import { StudioStory } from "@/components/about/StudioStory";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 
+const title = "About | Northstar Architecture";
+const description =
+  "Learn about Northstar Architecture, a Chicago studio grounded in place, clarity, and purpose.";
+const socialImage = {
+  url: "/images/northstar-hero-chicago.jpg",
+  width: 1600,
+  height: 1200,
+  alt: "Chicago high-rise architecture at dusk",
+};
+
 export const metadata: Metadata = {
-  title: "About | Northstar Architecture",
-  description:
-    "Learn about Northstar Architecture, a Chicago studio grounded in place, clarity, and purpose.",
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url: "/about",
+    siteName: "Northstar Architecture",
+    type: "website",
+    images: [socialImage],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: [socialImage],
+  },
 };
 
 export default function AboutPage() {

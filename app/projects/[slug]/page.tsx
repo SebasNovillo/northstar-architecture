@@ -30,9 +30,30 @@ export async function generateMetadata({
     notFound();
   }
 
+  const title = `${project.title} | Northstar Architecture`;
+  const description = `${project.title} is a ${project.category.toLowerCase()} architecture project by Northstar Architecture in ${project.location}, ${project.status.toLowerCase()} in ${project.year}. ${project.statement}`;
+  const projectImage = {
+    url: project.image,
+    alt: project.imageAlt,
+  };
+
   return {
-    title: `${project.title} | Northstar Architecture`,
-    description: `${project.title} is a ${project.category.toLowerCase()} architecture project by Northstar Architecture in ${project.location}, ${project.status.toLowerCase()} in ${project.year}. ${project.statement}`,
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: `/projects/${project.slug}`,
+      siteName: "Northstar Architecture",
+      type: "website",
+      images: [projectImage],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [projectImage],
+    },
   };
 }
 
